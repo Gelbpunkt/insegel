@@ -324,6 +324,7 @@ h1:hover .headerlink, h2:hover .headerlink, h3:hover .headerlink, h4:hover .head
   background-color: #F2F2F2;
   color: #2D2D2D;
   font-family: "IBM Plex Sans", serif;
+  outline-width: 0;
 }
 #search input[type=text]::placeholder {
   color: #a5a5a5;
