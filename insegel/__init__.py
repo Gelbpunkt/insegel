@@ -23,8 +23,8 @@ def update_context(app, pagename, templatename, context, doctree):
 #    dt = datetime.strptime(date_string, '%d %b %Y')
 #    return datarum.from_date(dt).strftime('{daeg} {month} {gere}')
 
-def add_jinja_filters(app):
-    app.builder.templates.environment.filters['wending'] = date_to_wending
+# def add_jinja_filters(app):
+#    app.builder.templates.environment.filters['wending'] = date_to_wending
 
 def setup(app):
     # add_html_theme is new in Sphinx 1.6+
@@ -32,6 +32,6 @@ def setup(app):
         theme_path = os.path.abspath(os.path.dirname(__file__))
         app.add_html_theme('insegel', theme_path)
     app.connect('html-page-context', update_context)
-    app.connect('builder-inited', add_jinja_filters)
+    # app.connect('builder-inited', add_jinja_filters)
     return {'version': '0.3.0',
             'parallel_read_safe': True}
